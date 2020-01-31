@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/Christos_Scene.unity
+=======
+- path: Assets/_Scenes/Kevin_Scene.unity
+>>>>>>> Graphic
   isLoaded: 1
   isActive: 1
   isSubScene: 0
