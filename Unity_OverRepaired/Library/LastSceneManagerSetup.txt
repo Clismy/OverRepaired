@@ -1,9 +1,13 @@
 sceneSetups:
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 - path: Assets/_Scenes/Christos_Scene.unity
 =======
 - path: Assets/_Scenes/PeterProg.unity
 >>>>>>> Stashed changes
+=======
+- path: Assets/_Scenes/PersScene.unity
+>>>>>>> Programming
   isLoaded: 1
   isActive: 1
   isSubScene: 0
