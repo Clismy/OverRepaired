@@ -343,14 +343,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/_Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: P:\A - Saker till kurser\Robot Repair\OverRepaired\Unity_OverRepaired
+  m_LastProjectPath: P:\A - Saker till kurser\Robot repair\OverRepaired\Unity_OverRepaired
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c02d0000
-    m_LastClickedID: 11712
-    m_ExpandedIDs: 000000001e2d000000ca9a3b
+    m_SelectedIDs: 642d0000
+    m_LastClickedID: 11620
+    m_ExpandedIDs: 00000000c22c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -378,7 +378,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001e2d0000
+    m_ExpandedIDs: 00000000c22c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -499,9 +499,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 6e300000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: bcf9ffff4efbffff
+      m_ExpandedIDs: d0f4ffff42f9ffff56f9ffffdaf9ffff16faffff76fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -561,9 +561,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.25092554, y: 2.286778, z: -0.87224436}
+    m_Target: {x: 0.47795114, y: 3.2264607, z: -1.345882}
     speed: 2
-    m_Value: {x: -0.25092554, y: 2.286778, z: -0.87224436}
+    m_Value: {x: 0.47795114, y: 3.2264607, z: -1.345882}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -592,13 +592,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.06251123, y: 0.935983, z: -0.2160067, w: -0.27086854}
+    m_Target: {x: -0.09240763, y: 0.90744317, z: -0.28101262, w: -0.29840136}
     speed: 2
-    m_Value: {x: -0.06193846, y: 0.9368667, z: -0.21769132, w: -0.26656124}
+    m_Value: {x: -0.09285495, y: 0.9070189, z: -0.28237295, w: -0.29826185}
   m_Size:
-    m_Target: 11.925186
+    m_Target: 6.515021
     speed: 2
-    m_Value: 11.411661
+    m_Value: 6.2150207
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -617,7 +617,7 @@ MonoBehaviour:
     m_DynamicClip: 1
     m_OcclusionCulling: 0
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
+  m_LastSceneViewRotation: {x: -0.06251123, y: 0.935983, z: -0.2160067, w: -0.27086854}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
