@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 114
+  controlID: 116
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 51
+  controlID: 75
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -337,19 +337,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Scenes
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_Scenes
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\b18chrka\UnityProjects_2020\OverRepaired\Unity_OverRepaired
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1e2d0000
-    m_LastClickedID: 11550
+    m_SelectedIDs: 882c0000
+    m_LastClickedID: 11400
     m_ExpandedIDs: 00000000882c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -499,7 +499,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: c22d0000
       m_LastClickedID: 0
       m_ExpandedIDs: 78fbffff
       m_RenameOverlay:
@@ -561,9 +561,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.826746, y: 1.8206508, z: -0.13090754}
+    m_Target: {x: -0.25092554, y: 2.286778, z: -0.87224436}
     speed: 2
-    m_Value: {x: -0.826746, y: 1.8206508, z: -0.13090754}
+    m_Value: {x: -0.25092554, y: 2.286778, z: -0.87224436}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -592,9 +592,9 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.053576373, y: 0.90583503, z: -0.12055496, w: -0.40256596}
+    m_Target: {x: -0.039109997, y: 0.92679274, z: -0.100774914, w: -0.35968098}
     speed: 2
-    m_Value: {x: -0.053395472, y: 0.90643775, z: -0.120635174, w: -0.4012067}
+    m_Value: {x: -0.040108804, y: 0.92501265, z: -0.101985514, w: -0.36378804}
   m_Size:
     m_Target: 10
     speed: 2
