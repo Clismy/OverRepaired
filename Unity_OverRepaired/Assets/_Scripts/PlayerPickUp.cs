@@ -30,7 +30,15 @@ public class PlayerPickUp : MonoBehaviour
             if(destination > newDistance && newDistance >= 0)
             {
                 destination = newDistance;
-                closestObject = r.transform.gameObject;
+                //closestObject = r.transform.gameObject;
+                if(r.gameObject.layer == 12)
+                {
+                    closestObject = closestObject?.GetComponent<BrokenRobot>()?.getPart().gameObject;
+                }
+                else
+                {
+                    closestObject = r.transform.gameObject;
+                }
             }
         }
 
@@ -45,7 +53,7 @@ public class PlayerPickUp : MonoBehaviour
             if(Input.GetButtonDown(inputName) && !pickedUp) //If we have nothing in hand, pick up
             {
                 pickedUpGameobject = closestObject;
-                pickedUpGameobject.GetComponent<CapsuleCollider>().isTrigger = true;
+                pickedUpGameobject.GetComponent<Collider>().isTrigger = true;
                 pickedUpGameobject.GetComponent<Rigidbody>().isKinematic = true;
                 pickedUp = true;
             }
@@ -54,7 +62,7 @@ public class PlayerPickUp : MonoBehaviour
                 pickedUpGameobject.GetComponent<Rigidbody>().isKinematic = false;
                 pickedUpGameobject.GetComponent<Rigidbody>().AddForce(transform.forward * 15, ForceMode.Impulse);
 
-                pickedUpGameobject.GetComponent<CapsuleCollider>().isTrigger = false;
+                pickedUpGameobject.GetComponent<Collider>().isTrigger = false;
                 pickedUp = false;
                 pickedUpGameobject = null;
             }

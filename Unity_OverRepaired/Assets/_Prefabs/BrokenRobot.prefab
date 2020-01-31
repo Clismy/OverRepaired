@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2914723612386305266}
   - component: {fileID: 49623014331433302}
   - component: {fileID: -5070487012137360993}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BrokenRobot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
