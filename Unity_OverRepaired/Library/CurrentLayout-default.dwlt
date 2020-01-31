@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 75
+  controlID: 51
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,14 +343,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/_Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: P:\A - Saker till kurser\Robot repair\OverRepaired\Unity_OverRepaired
+  m_LastProjectPath: P:\A - Saker till kurser\Robot repair jonas\OverRepaired\Unity_OverRepaired
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 642d0000
-    m_LastClickedID: 11620
-    m_ExpandedIDs: 00000000c22c000000ca9a3b
+    m_SelectedIDs: b22d0000
+    m_LastClickedID: 11698
+    m_ExpandedIDs: 00000000102d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -378,7 +378,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c22c0000
+    m_ExpandedIDs: 00000000102d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -501,7 +501,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d0f4ffff42f9ffff56f9ffffdaf9ffff16faffff76fbffff
+      m_ExpandedIDs: 60fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -594,11 +594,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.09240763, y: 0.90744317, z: -0.28101262, w: -0.29840136}
     speed: 2
-    m_Value: {x: -0.09285495, y: 0.9070189, z: -0.28237295, w: -0.29826185}
+    m_Value: {x: -0.092407465, y: 0.90744156, z: -0.28101212, w: -0.29840082}
   m_Size:
     m_Target: 6.515021
     speed: 2
-    m_Value: 6.2150207
+    m_Value: 6.515021
   m_Ortho:
     m_Target: 0
     speed: 2
