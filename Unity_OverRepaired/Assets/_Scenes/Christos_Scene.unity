@@ -283,6 +283,8 @@ MonoBehaviour:
   collideWithPickUp:
     serializedVersion: 2
     m_Bits: 2048
+  pickdUpLayer: 0
+  droppedLayer: 11
   secondPlayer: 1
 --- !u!114 &551372420
 MonoBehaviour:
@@ -2778,4 +2780,6 @@ MonoBehaviour:
   collideWithPickUp:
     serializedVersion: 2
     m_Bits: 6144
+  pickdUpLayer: 0
+  droppedLayer: 11
   secondPlayer: 0
