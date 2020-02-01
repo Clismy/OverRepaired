@@ -9,9 +9,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float deAcceleration;
 
     [SerializeField] bool secondPlayer;
+    bool stopMoving = false;
 
     Rigidbody rb;
-    Vector3 velocity;
+    Vector3 input;
     Vector3 rotVelocity;
 
     void Start()
@@ -37,9 +38,11 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = secondPlayer == false ? Input.GetAxisRaw("Horizontal1") : Input.GetAxisRaw("Horizontal2");
         float vertical =  secondPlayer == false ? Input.GetAxisRaw("Vertical1") : Input.GetAxisRaw("Vertical2");
 
-        velocity = SetVelocity(GetDirection(horizontal), GetDirection(vertical));
+        input = new Vector3(GetAcceleratedInput(horizontal, input.x), 0f , GetAcceleratedInput(vertical, input.z));
 
-        rb.velocity = velocity.normalized * movementSpeed;
+        Vector3 moveDirection = input.normalized * movementSpeed;
+
+        rb.velocity = moveDirection;
     }
 
     void RotateTowardsVelocity()
@@ -47,37 +50,45 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(rotVelocity, Vector3.up);
     }
 
-
-    Vector3 SetVelocity(float inputx, float inputy)
+    float GetAcceleratedInput(float newInput, float oldInput)
     {
-        Vector3 input = new Vector3(inputx, 0f, inputy);
-
-        if(Mathf.Abs(input.sqrMagnitude) > 0)
+        if (Mathf.Abs(newInput) > 0)
         {
-            
+            int direction = SetDirection(newInput, oldInput);
+
+            float speed = movementSpeed;
+
+            oldInput = Mathf.MoveTowards(oldInput, direction, acceleration * Time.deltaTime);
         }
         else
         {
-
+            oldInput = Mathf.MoveTowards(oldInput, 0f, deAcceleration * Time.deltaTime);
         }
 
-
-        return input;
+        return oldInput;
     }
 
-
-    
-
-    int GetDirection(float input)
+    int SetDirection(float value, float input)
     {
-        if(input > 0)
+        int direction = 0; //Make A Variable That Will Store The Direction Of The Player, Depending On Where They Press
+        if (value > 0) //If The Player Pressed "Right"
         {
-            return 1;
+            direction = 1;
         }
-        else if(input < 0)
+        else if (value < 0) //If The Player Pressed "Left"
         {
-            return -1;
+            direction = -1;
         }
-        return 0; 
+
+        if (stopMoving == true)
+        {
+            direction = 0;
+            input = 0;
+        }
+
+        return direction;
     }
+
+
+
 }

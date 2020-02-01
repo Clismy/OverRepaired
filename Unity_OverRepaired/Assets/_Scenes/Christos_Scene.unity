@@ -296,9 +296,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa7a33ce3d09c7438dc4f07782f3f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
-  acceleration: 0
-  deAcceleration: 0
+  movementSpeed: 4
+  acceleration: 24
+  deAcceleration: 24
   secondPlayer: 1
 --- !u!54 &551372421
 Rigidbody:
@@ -2756,9 +2756,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa7a33ce3d09c7438dc4f07782f3f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
-  acceleration: 0
-  deAcceleration: 0
+  movementSpeed: 4
+  acceleration: 24
+  deAcceleration: 24
   secondPlayer: 0
 --- !u!114 &2061921967
 MonoBehaviour:
