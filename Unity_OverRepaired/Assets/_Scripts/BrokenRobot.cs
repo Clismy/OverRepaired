@@ -27,6 +27,7 @@ public class BrokenRobot : MonoBehaviour
     public void Update()
     {
         transform.Translate(Vector3.left * speed * Time.deltaTime);
+
     }
 
     public int[] randomBroken()
@@ -44,6 +45,7 @@ public class BrokenRobot : MonoBehaviour
                 var tempRobotPart = transform.GetChild(i).GetChild(0).GetComponent<RobotPart>();
                 if (tempRobotPart != null && tempRobotPart.isBroken)
                 {
+                    Debug.Log("nani!");
                     tempRobotPart.transform.parent = null;
                     tempRobotPart.gameObject.layer = 11;
                     return tempRobotPart;

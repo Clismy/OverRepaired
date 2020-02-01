@@ -13,6 +13,7 @@ public class PlayerPickUp : MonoBehaviour
     [SerializeField] float sphereRadius;
     [SerializeField] LayerMask collideWithPickUp;
     GameObject closestObject;
+    [SerializeField] int pickdUpLayer, droppedLayer;
     [SerializeField] bool secondPlayer = false;
 
     void Update()
@@ -31,31 +32,32 @@ public class PlayerPickUp : MonoBehaviour
             {
                 destination = newDistance;
                 //closestObject = r.transform.gameObject;
-                if(r.gameObject.layer == 12)
-                {
-                    closestObject = closestObject?.GetComponent<BrokenRobot>()?.getPart().gameObject;
-                }
-                else
-                {
-                    closestObject = r.transform.gameObject;
-                }
+
+                  
+                closestObject = r.transform.gameObject;
+
             }
         }
 
         if(closestObject != null) //We have found our closestObject
         {
-            if(Time.time % 2  == 0)
-            {
-                Debug.Log("CLOSEST OBJECT IS " + closestObject.name);
-            }
-
             string inputName = secondPlayer == false ? "PickUp1" : "PickUp2";
             if(Input.GetButtonDown(inputName) && !pickedUp) //If we have nothing in hand, pick up
             {
-                pickedUpGameobject = closestObject;
-                pickedUpGameobject.GetComponent<Collider>().isTrigger = true;
-                pickedUpGameobject.GetComponent<Rigidbody>().isKinematic = true;
-                pickedUp = true;
+                if (closestObject.gameObject.layer == 12)
+                {
+                    pickedUpGameobject = closestObject?.GetComponent<BrokenRobot>()?.getPart()?.gameObject;
+                }
+                else
+                {
+                    pickedUpGameobject = closestObject;
+                }
+                if (pickedUpGameobject != null) {
+                    pickedUpGameobject.GetComponent<Collider>().isTrigger = true;
+                    pickedUpGameobject.GetComponent<Rigidbody>().isKinematic = true;
+                    pickedUpGameobject.layer = pickdUpLayer;
+                    pickedUp = true;
+                }
             }
             else if(Input.GetButtonDown(inputName) && pickedUp) //If we have something in hand, throw
             {
@@ -63,8 +65,11 @@ public class PlayerPickUp : MonoBehaviour
                 pickedUpGameobject.GetComponent<Rigidbody>().AddForce(transform.forward * 15, ForceMode.Impulse);
 
                 pickedUpGameobject.GetComponent<Collider>().isTrigger = false;
+                pickedUpGameobject.layer = droppedLayer;
+
                 pickedUp = false;
                 pickedUpGameobject = null;
+                closestObject = null;
             }
         }
 
