@@ -15,7 +15,7 @@ public class BrokenRobot : MonoBehaviour
     {
         for (int i = 0; i < 6; i++) {
            var temp = Instantiate(parts[i], transform.GetChild(i));
-            temp.gameObject.layer = 0;
+           temp.gameObject.layer = 0;
         }
         var brokenParts = randomBroken();
         for (int y = 0; y < howManyBrokenParts; y++)
@@ -32,7 +32,7 @@ public class BrokenRobot : MonoBehaviour
 
     public int[] randomBroken()
     {
-        int[] list = new[] { 0,1,2,3,4,5};
+        int[] list = new[] { 1,2,3,4,5};
         return list.OrderBy(x => Random.Range(0, parts.Length)).Take(howManyBrokenParts).ToArray();
     }
 
@@ -45,7 +45,6 @@ public class BrokenRobot : MonoBehaviour
                 var tempRobotPart = transform.GetChild(i).GetChild(0).GetComponent<RobotPart>();
                 if (tempRobotPart != null && tempRobotPart.isBroken)
                 {
-                    Debug.Log("nani!");
                     tempRobotPart.transform.parent = null;
                     tempRobotPart.gameObject.layer = 11;
                     return tempRobotPart;

@@ -107,6 +107,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBroken: 0
+  repairOrder:
+  - Hammer
+  - Screw
+  - Welding
+  - Paint
   whatPart: 4
 --- !u!54 &-9019498812717130505
 Rigidbody:

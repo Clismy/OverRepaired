@@ -6,6 +6,11 @@ using UnityEngine;
 public class RobotPart : MonoBehaviour
 {
     public bool isBroken = false;
+
+    [SerializeField]
+    private string[] repairOrder = new string[4];
+    public Stack<string> repairOrderStack = new Stack<string>();
+
     [Serializable]
     public enum parts
     {
