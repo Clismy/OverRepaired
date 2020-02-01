@@ -8,27 +8,4 @@ public class LimbCheck : MonoBehaviour
     private List<GameObject> brokenLimbs = new List<GameObject>();
     public GameObject tsest;
 
-    void CheckLimb()
-    {
-        brokenLimbs.Add(tsest);
-        for (int i = 0; i < brokenLimbs.Count; i++)
-        {
-            for (int j = 0; j < limbs.Count; j++)
-            {
-                if (brokenLimbs[i].name == limbs[j].name)
-                {
-                    limbs[j].GetComponent<Image>().color = Color.red;
-                    limbs[j].GetComponent<SetChildActive>().setTrue();
-                }
-            }
-        }
-
-    } 
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        CheckLimb();
-    }
 }
