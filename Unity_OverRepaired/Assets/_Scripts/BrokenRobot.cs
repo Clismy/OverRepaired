@@ -11,10 +11,11 @@ public class BrokenRobot : MonoBehaviour
     public int howManyBrokenParts;
 
 
-    public void Start()
+    public void CreateRobot()
     {
         for (int i = 0; i < 6; i++) {
-            Instantiate(parts[i], transform.GetChild(i));
+           var temp = Instantiate(parts[i], transform.GetChild(i));
+            temp.gameObject.layer = 0;
         }
         var brokenParts = randomBroken();
         for (int y = 0; y < howManyBrokenParts; y++)
@@ -23,14 +24,35 @@ public class BrokenRobot : MonoBehaviour
         }
     }
 
+    public RobotPart[] getParts()
+    {
+        RobotPart[] tempList = new RobotPart[6];
+        for (int i = 0; i < 6; i++)
+        {
+            var temp = transform.GetChild(i).childCount;
+            if (temp > 0)
+            {
+                var tempRobotPart = transform.GetChild(i).GetChild(0).GetComponent<RobotPart>();
+                if (tempRobotPart != null)
+                {
+                    tempList[i] = tempRobotPart;
+
+                }
+            }
+        }
+        return tempList;
+    }
+
+
     public void Update()
     {
         transform.Translate(Vector3.left * speed * Time.deltaTime);
+
     }
 
     public int[] randomBroken()
     {
-        int[] list = new[] { 0,1,2,3,4,5};
+        int[] list = new[] { 0,2,3,4,5};
         return list.OrderBy(x => Random.Range(0, parts.Length)).Take(howManyBrokenParts).ToArray();
     }
 
@@ -43,7 +65,9 @@ public class BrokenRobot : MonoBehaviour
                 var tempRobotPart = transform.GetChild(i).GetChild(0).GetComponent<RobotPart>();
                 if (tempRobotPart != null && tempRobotPart.isBroken)
                 {
+                    Debug.Log("nani!");
                     tempRobotPart.transform.parent = null;
+                    tempRobotPart.gameObject.layer = 11;
                     return tempRobotPart;
                 }
             }
@@ -51,12 +75,18 @@ public class BrokenRobot : MonoBehaviour
         return null;
     }
 
-    public void setPart(RobotPart part)
+    public bool setPart(RobotPart part)
     {
-        if (!part.isBroken && transform.GetChild((int)part.whatPart).childCount > 0 )
+        if (!part.isBroken && transform.GetChild((int)part.whatPart).childCount == 0)
         {
+            part.transform.position = transform.GetChild((int)part.whatPart).position;
+            part.transform.rotation = transform.GetChild((int)part.whatPart).rotation;
+
             part.transform.parent = transform.GetChild((int)part.whatPart);
+            part.gameObject.layer = 0;
+            return true;
         }
+        return false;
     }
 
 }

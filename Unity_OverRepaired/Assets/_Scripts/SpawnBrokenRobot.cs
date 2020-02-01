@@ -7,7 +7,9 @@ public class SpawnBrokenRobot : MonoBehaviour
     public BrokenRobot prefab;
     public float SpawnTime;
     public Transform spawnPostion;
+    public BluePrintHandler bph;
     private float timer = 0;
+
     public void Start()
     {
         SpawnRobot();
@@ -29,6 +31,9 @@ public class SpawnBrokenRobot : MonoBehaviour
 
     public void SpawnRobot()
     {
-        Instantiate(prefab, spawnPostion);
+       var tempRob = Instantiate(prefab, spawnPostion);
+        tempRob.CreateRobot();
+        bph.CheckBluePrint(tempRob.getParts());
+
     }
 }

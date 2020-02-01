@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2914723612386305266}
   - component: {fileID: 49623014331433302}
   - component: {fileID: -5070487012137360993}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BrokenRobot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ MonoBehaviour:
   - {fileID: -6252258903184026028, guid: cda9fb8ce83118e4eaf891cc94ec1c38, type: 3}
   - {fileID: 8993452733528890965, guid: 048687a7cebae184cbc131e2c78a44f0, type: 3}
   - {fileID: 3145772665886381459, guid: 7ce1ad2f06d612e4bb7c3985d6b2c0c1, type: 3}
-  - {fileID: -16720156227749152, guid: a3cc2dcff21d9484e9946f2662f6fde9, type: 3}
+  - {fileID: 1761974379072320822, guid: a3cc2dcff21d9484e9946f2662f6fde9, type: 3}
   - {fileID: 2259385937061793482, guid: f5d9e621ca4d4714a859bc8e5d666e3e, type: 3}
   - {fileID: -6224652603078791763, guid: 79992109e4326534c9a9ba17f2c515a0, type: 3}
   speed: 0.3

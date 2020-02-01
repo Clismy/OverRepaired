@@ -13,12 +13,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Floor
+  - Wall
+  - Pick Up
+  - Interactable
+  - Workbench
   - 
   - 
   - 

@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 6581587139157531201}
   - component: {fileID: 6989159930731263984}
   - component: {fileID: 3145772665886381459}
-  m_Layer: 0
+  - component: {fileID: -6228679514633274702}
+  m_Layer: 11
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,8 +103,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 6870879518528659791}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e4ce443f80a90d40ab0930940a28b21, type: 3}
+  m_Script: {fileID: 11500000, guid: 295c94160a3048644be25ed182c7fe37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isBroken: 0
+  repairOrder:
+  - Weld
+  - Screw
+  - Hammer
+  - Paint
   whatPart: 2
+--- !u!54 &-6228679514633274702
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6870879518528659791}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
