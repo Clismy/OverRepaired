@@ -14,7 +14,8 @@ public class BrokenRobot : MonoBehaviour
     public void Start()
     {
         for (int i = 0; i < 6; i++) {
-            Instantiate(parts[i], transform.GetChild(i));
+           var temp = Instantiate(parts[i], transform.GetChild(i));
+            temp.gameObject.layer = 0;
         }
         var brokenParts = randomBroken();
         for (int y = 0; y < howManyBrokenParts; y++)
@@ -44,6 +45,7 @@ public class BrokenRobot : MonoBehaviour
                 if (tempRobotPart != null && tempRobotPart.isBroken)
                 {
                     tempRobotPart.transform.parent = null;
+                    tempRobotPart.gameObject.layer = 11;
                     return tempRobotPart;
                 }
             }
